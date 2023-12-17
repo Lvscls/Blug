@@ -24,6 +24,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []); 
 
+  // permet l'enregistrement du token et des info du user dans le local storage. ainsi que confirme l'authentification 
   const login = (jwtToken, userData) => {
     localStorage.setItem('token', jwtToken);
     localStorage.setItem('userInfo', JSON.stringify(userData));
@@ -34,6 +35,7 @@ export const AuthProvider = ({ children }) => {
     setCookie(jwtToken)
   };
 
+  // permet la suppression du token et des info du user dans le local storage. Ainsi que confirme la déconnexion
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userInfo');

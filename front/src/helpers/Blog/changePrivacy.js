@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de changer la privacy d'un blog
 async function changePrivacy(blogId) {
   try {
     const response = await fetch(`${backendURL}/blogs/change-privacy`, {

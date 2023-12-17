@@ -1,5 +1,6 @@
 import { backendURL } from '../../../constants/urls';
 
+//fonction qui permet de gérer l'inscription
 async function handleRegister({ username, password }) {
   // Validation côté client
   if (!username || !password) {

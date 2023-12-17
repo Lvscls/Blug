@@ -8,6 +8,7 @@ const { authenticator } = require("otplib");
 const authConfig = require("../config/authConfig");
 
 const authController = {
+  // Inscription d'un utilisateur
   async signup(req, res) {
     try {
       const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -66,7 +67,7 @@ const authController = {
       res.status(500).json({ message: "Erreur interne du serveur", error });
     }
   },
-
+  // Génération du QR code pour l'A2F
   async generateQRCode(req, res) {
     try {
       const service = "BlugA2F";
@@ -91,6 +92,7 @@ const authController = {
     }
   },
 
+  // Vérification du token A2F
   async verifyToken(req, res) {
     const token = req.body.verificationCode;
     const jwtToken = req.body.token;
@@ -139,6 +141,7 @@ const authController = {
     }
   },
 
+  // Déconnexion d'un utilisateur de tous ses appareils
   async logoutAll(req, res) {
     try {
       const authHeader = req.headers.authorization;

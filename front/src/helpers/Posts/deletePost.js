@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de supprimer un post (non utilisé)
 async function deletePost(postId) {
   try {
     const response = await fetch(`${backendURL}/posts/${postId}`, {

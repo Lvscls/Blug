@@ -97,6 +97,7 @@ const blogController = {
     }
   },
 
+  // Changer la privacy d'un blog (public ou privé)
   async changePrivacy(req, res) {
     try {
       console.log(req.body)

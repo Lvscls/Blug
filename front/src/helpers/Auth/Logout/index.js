@@ -1,5 +1,6 @@
 import { backendURL } from '../../../constants/urls';
 
+// fonction qui permet de gérer la déconnexion
 async function handleLogout() {
   try {
     const response = await fetch(`${backendURL}/auth/logout`, {

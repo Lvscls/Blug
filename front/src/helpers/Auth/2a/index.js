@@ -1,5 +1,6 @@
 import { backendURL } from '../../../constants/urls';
 
+// Fonction qui permet de récupérer l'URL de l'image du QR code
 const generateQRCode = async ({username}) => {
   try {
     const response = await fetch(`${backendURL}/auth/generate-qrcode`, {

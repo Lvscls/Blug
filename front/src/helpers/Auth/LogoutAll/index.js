@@ -1,5 +1,6 @@
 import { backendURL } from "../../../constants/urls";
 
+// fonction qui permet de gérer la déconnexion de tous les appareils
 const handleLogoutAll = async (token) => {
   try {
     // Logout all devices

@@ -82,6 +82,7 @@ const userController = {
     }
   },
 
+  // Récupérer l'utilisateur actuel grâce au token
   async getCurrentUser(req, res) {
     try {
       const data = jwt.decode(req.body.token, authConfig.jwtSecret);

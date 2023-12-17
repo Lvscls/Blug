@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de récupérer tous les blogs public
 async function getBlogsPublic() {
   try {
     const response = await fetch(`${backendURL}/blogs/public/blogs`);

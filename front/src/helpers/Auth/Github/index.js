@@ -1,5 +1,6 @@
 import { backendURL } from '../../../constants/urls';
 
+// fonction qui permet de gérer l'authentification Github
 async function handleGithub() {
   try {
       window.location.href = `${backendURL}/auth/github`

@@ -14,6 +14,7 @@ module.exports = verifyBlackList = async (req, res, next) => {
     const decodedToken = jwt.verify(token, authConfig.jwtSecret);
     const username = decodedToken.username;
 
+    // Vérifier si l'utilisateur est sur la liste noire
     const blacklistedToken = await models.Blacklist.findOne({
       where: { username: username },
     });

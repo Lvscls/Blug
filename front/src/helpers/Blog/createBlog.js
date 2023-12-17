@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de créer un blog
 async function createBlog(blogData) {
   try {
     const response = await fetch(`${backendURL}/blogs`, {

@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de modifier un post
 async function modifyPost(postId, postData) {
     try {
         const response = await fetch(`${backendURL}/posts/${postId}`, {

@@ -1,6 +1,6 @@
 import { backendURL } from '../../../constants/urls';
 
-
+// fonction qui permet de connecté l'utilisateur
 async function handleLogin({ username, password }) {
   try {
     const response = await fetch(`${backendURL}/auth/login`, {

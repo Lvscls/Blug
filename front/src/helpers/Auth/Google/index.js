@@ -1,5 +1,6 @@
 import { backendURL } from '../../../constants/urls';
 
+// fonction qui permet de gérer l'authentification Google
 async function handleGoogle() {
   try {
       window.location.href = `${backendURL}/auth/google`

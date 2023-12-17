@@ -34,7 +34,6 @@ passport.use(
           const newUser = await models.User.create({
             googleId: profile.id,
             username: profile.displayName,
-            // autres champs que vous pourriez vouloir sauvegarder
           });
 
           // Générer le token pour le nouvel utilisateur
@@ -58,7 +57,7 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_SECRET,
-      callbackURL: "/api/auth/github/redirect", // Assurez-vous que l'URL est complète
+      callbackURL: "/api/auth/github/redirect", 
     },
     async (accessToken, refreshToken, profile, done) => {
       console.log("Profile ID:", profile.id);
@@ -81,7 +80,6 @@ passport.use(
           const newUser = await models.User.create({
             githubId: profile.id,
             username: profile.displayName,
-            // autres champs que vous pourriez vouloir sauvegarder
           });
 
           // Générer le token pour le nouvel utilisateur

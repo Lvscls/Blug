@@ -1,5 +1,6 @@
 import { backendURL } from '../../../constants/urls';
 
+// fonction qui permet de gérer la vérification du code
 const handleVerifyCode = async (verificationCode, token) => {
   try {
     const response = await fetch(`${backendURL}/auth/verify-token`, {

@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de créer un post
 async function createPost(postData) {
   try {
     const response = await fetch(`${backendURL}/posts`, {

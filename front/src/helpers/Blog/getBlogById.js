@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de récupérer un blog par ID
 async function getBlogById(blogId) {
   try {
     const response = await fetch(`${backendURL}/blogs/${blogId}`);

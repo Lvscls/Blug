@@ -1,5 +1,6 @@
 import { backendURL } from '../../constants/urls';
 
+// fonction qui permet de récupérer le user courant
 const getCurrentUser = async (token) => {
   try {
     const response = await fetch(`${backendURL}/users/current-user`, {
